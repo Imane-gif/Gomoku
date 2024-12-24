@@ -1,0 +1,116 @@
+Ce code est un jeu de Gomoku (ou "Five in a Row") implémenté en Python en utilisant la bibliothèque Tkinter pour créer une interface graphique. 
+Le but du jeu est d'aligner cinq pièces de la même couleur horizontalement, verticalement ou en diagonale sur un plateau de 15x15.
+
+
+     -
+Description des principales parties du code :
+
+
+--Importations et Configuration de la Fenêtre :
+
+--
+import Tkinter et import time: Importation des bibliothèques nécessaires.
+
+--myInterface = Tk(): Création de la fenêtre principale.
+
+--s = Canvas(): Création d'un canevas où le plateau et les pièces seront dessinés.
+
+
+
+     -Fonctions Utilitaires :
+
+
+
+--create_circle(): Dessine un cercle (utilisé pour les pièces de jeu).
+
+--Value_Check_int(): Vérifie si une valeur est un entier.
+
+--MouseClick(): Gère les clics de souris et obtient les coordonnées du clic.
+
+--Piece_Location(): Détermine la position sur le plateau basée sur les coordonnées du clic.
+
+--Location_Validation(): Valide si la position sélectionnée est libre.
+
+--Score_Board(): Met à jour l'affichage du score ou du gagnant.
+
+--winCheck(): Vérifie si un joueur a gagné en appelant des fonctions de vérification pour chaque direction.
+
+--rowCheck(), transpose(), getDiagonalDec(), transposeDiagonalDec(), getDiagonalInc(), transposeDiagonalInc(), getCol(): Fonctions auxiliaires pour vérifier 
+--les lignes, colonnes et diagonales pour cinq pièces consécutives de la même couleur.
+
+--Exit(): Ferme la fenêtre et arrête le jeu.
+
+
+     -
+Initialisation du Plateau :
+
+
+
+--Les dimensions du plateau et des pièces sont définies.
+
+--Des listes pour les coordonnées du plateau et les pièces sont initialisées.
+--
+Un bouton "EXIT" est ajouté pour permettre de quitter le jeu.
+
+
+     -
+Création du Plateau :
+
+
+
+--Le plateau de jeu est dessiné avec des lignes et des numéros de rangée et de colonne.
+
+    
+
+ -Boucle de Jeu :
+
+--
+
+Le jeu tourne dans une boucle while jusqu'à ce qu'il y ait un gagnant.
+
+--s.update(): Met à jour le canevas.
+
+--Les clics de souris sont traités pour placer des pièces sur le plateau.
+--
+Les pièces sont alternées entre blanches et noires.
+--
+Le score est mis à jour après chaque coup.
+--
+winCheck() vérifie si un joueur a gagné après chaque coup.
+
+
+
+     -Comment le jeu fonctionne :
+
+
+--Démarrage : L'utilisateur lance le programme.
+--
+Clics de Souris : L'utilisateur clique sur le plateau pour placer une pièce.
+--
+Validation : Le programme vérifie si la position est valide (vide).
+--
+Placement de la Pièce : La pièce est placée et le tour change.
+--
+Vérification de Victoire : Le programme vérifie si un joueur a aligné cinq pièces.
+
+--Fin du Jeu : Si un joueur gagne ou si le bouton "EXIT" est cliqué, le jeu se termine.
+
+
+
+    -Exemple de Fonctionnement :
+
+
+--Le joueur clique sur une case vide.
+--
+Une pièce (blanche ou noire) est placée à cet endroit.
+
+--Le programme vérifie si ce coup a mené à une victoire.
+
+--Si non, le jeu continue avec l'autre joueur.
+
+Ce code met en œuvre les concepts de base d'un jeu de plateau interactif avec une interface graphique et une logique de vérification de victoire.
+
+
+
+
+
